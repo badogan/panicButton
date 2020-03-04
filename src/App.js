@@ -1,17 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
-import Counter from "./components/Counter";
-import AdBanner from "./components/AdBanner";
-import TimeOnPage from "./components/TimeOnPage";
-import UserList from "./components/UserList";
+// import Counter from "./components/Counter";
+// import AdBanner from "./components/AdBanner";
+// import TimeOnPage from "./components/TimeOnPage";
+// import UserList from "./components/UserList";
+import MainPage from './pages/MainPage'
 
 const App = () => {
   return (
     <div>
-      <TimeOnPage />
+      {/* <TimeOnPage />
       <Counter />
       <UserList/>
-      <AdBanner />
+      <AdBanner /> */}
+      <MainPage />
     </div>
   );
 };
