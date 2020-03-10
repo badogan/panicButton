@@ -2,12 +2,12 @@ import { useEffect, useState } from "react";
 
 const usePanic = () => {
   const [panic, setPanic] = useState({});
-  const URL =
-    "https://e5ucmo7jmf.execute-api.eu-west-2.amazonaws.com/default/nodeFunction1";
+  const URL_to_GET ="https://e5ucmo7jmf.execute-api.eu-west-2.amazonaws.com/default/nodeFunction1";
+  const URL_to_POST='https://fullstack-test-backend-basri.herokuapp.com/panic_update'
 
   const updatePanic = newPanicObject => {
     console.log(newPanicObject);
-    fetch(URL, {
+    fetch(URL_to_POST, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -22,7 +22,7 @@ const usePanic = () => {
   };
 
   useEffect(() => {
-    fetch(URL)
+    fetch(URL_to_GET)
       .then(response => response.json())
       .then(panic => setPanic(panic));
   }, []);
