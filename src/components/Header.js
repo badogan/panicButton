@@ -7,8 +7,8 @@ const Header = () => {
         <h5>M</h5>
       </div>
       <div className="name-of-app">
-        <br />
-        <h1>Meet In The Middle</h1>
+          <br/>
+        <h3>Admin Module | Meet In The Middle</h3>
       </div>
     </div>
   );

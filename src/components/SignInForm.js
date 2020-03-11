@@ -20,7 +20,7 @@ const SignInForm = props => {
   }, []);
 
   return (
-    <div>
+    <div className="signin-container wrapper">
       <h3>Signin form</h3>
       <form id="form33" onSubmit={() => sendToUpdateUserSignIn()}>
         {/* <label>Username: </label> */}
@@ -40,7 +40,7 @@ const SignInForm = props => {
         ></input>
       </form>
       <br />
-      <button onClick={sendToUpdateUserSignIn}> SignIN</button>
+      <button className="signin-button" onClick={sendToUpdateUserSignIn}> Signin</button>
     </div>
   );
 };
