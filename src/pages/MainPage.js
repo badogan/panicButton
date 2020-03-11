@@ -9,15 +9,11 @@ const MainPage = () => {
 
   return (
     <React.Fragment>
-      {userSignin.token ? null : (
-        <SignInForm updateUserSignin={updateUserSignin} />
-      )}
-      {userSignin.token ? (
-        <WelcomeAndSignoutForm
+      {userSignin.token ? null : (<SignInForm updateUserSignin={updateUserSignin} />)}
+      {userSignin.token ? (<WelcomeAndSignoutForm
           username={userSignin.username}
           userSignout={userSignout}
-        />
-      ) : null}
+        />) : null}
       {userSignin.token ? <PanicStatusAndForm /> : null}
     </React.Fragment>
   );
