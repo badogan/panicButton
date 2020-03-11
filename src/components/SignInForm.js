@@ -12,7 +12,7 @@ const SignInForm = (props) => {
   return (
     <div>
       <h3>I am the signin form</h3>
-      <button onClick={sendToUpdateUserSignIn}> SignIN New User</button>
+      <button onClick={sendToUpdateUserSignIn}> SignIN</button>
     </div>
   );
 };

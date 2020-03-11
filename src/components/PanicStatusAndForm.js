@@ -8,7 +8,7 @@ const PanicStatusAndForm = () => {
     updatePanic({
       panic: {
         status: true,
-        reason: "direct update from panic react app"
+        reason: "some update"
       }
     });
   };

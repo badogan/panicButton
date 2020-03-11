@@ -6,8 +6,13 @@ const useUserSignin = () => {
   const updateUserSignin = userSigninObject =>
     API.UserSignIn(userSigninObject).then(loggedinUser => {
       setUserSignin(loggedinUser);
+      // localStorage.token = loggedinUser.token
     });
-  return { userSignin, updateUserSignin };
+  const userSignout = () => {
+    setUserSignin({});
+    localStorage.removeItem("token");
+  };
+  return { userSignin, updateUserSignin, userSignout };
 };
 
 export default useUserSignin;

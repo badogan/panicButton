@@ -14,6 +14,22 @@ const postSimple = (url, obj) => {
   });
 };
 
+const postAuth = (url, obj) => {
+  return fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+      Authorization: localStorage.token
+    },
+    body: JSON.stringify(obj)
+  });
+};
+
+const getSimple = url => {
+  return fetch(url);
+};
+
 const newUserSignUp = userSignupObject => {
   return postSimple(URL_userSignup, userSignupObject).then(response =>
     response.json()
@@ -26,4 +42,17 @@ const UserSignIn = userSignInObject => {
   );
 };
 
-export default { newUserSignUp, UserSignIn };
+const getCurrentPanicStatus = () => {
+  return getSimple(URL_currentPanic);
+};
+
+const postNewPanicStatus = obj => {
+  return postAuth(URL_updatePanic, obj);
+};
+
+export default {
+  newUserSignUp,
+  UserSignIn,
+  getCurrentPanicStatus,
+  postNewPanicStatus
+};
