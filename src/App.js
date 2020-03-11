@@ -4,11 +4,13 @@ import "./App.css";
 // import AdBanner from "./components/AdBanner";
 // import TimeOnPage from "./components/TimeOnPage";
 // import UserList from "./components/UserList";
-import MainPage from './pages/MainPage'
+import MainPage from "./pages/MainPage";
+import Header from './components/Header'
 
 const App = () => {
   return (
-    <div>
+    <div className="App">
+      <Header />
       {/* <TimeOnPage />
       <Counter />
       <UserList/>
